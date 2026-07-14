@@ -70,7 +70,7 @@
     return a;
   }
   function normalise(s) {
-    return (s || "").toString().trim().toLowerCase().replace(/[^\w\sáéíóúüñàèìòùâêîôûäëïöüçãõ]/gi, "");
+    return (s || "").toString().trim().toLowerCase().replace(/[^wsáéíóúüñàèìòùâêîôûäëïöüçãõ]/gi, "");
   }
   function fmtTime(sec) { return sec ? sec.toFixed(1) + "s" : "—"; }
   function questionKey(q) { return normalise(q.q) + "|" + normalise(q.a); }
@@ -199,7 +199,7 @@
       '<div class="loops-header">' +
       '<img class="loops-logo-mark" src="' + (GAME.logoPath || "../Loops_triskel_mark.png") + '" alt="Loops" onerror="this.style.display=&#39;none&#39;">' +
       '<div style="font-size:2rem;">' + (GAME.emoji || "🎮") + '</div>' +
-      "<h1>" + GAME.name + "</h1><div class=\"sub\">Loops Learning Tools · Dublin</div></div>" +
+      "<h1>" + GAME.name + "</h1><div class="sub">Loops Learning Tools · Dublin</div></div>" +
       '<div id="loopsHome" class="loops-screen active">' +
       '<div id="loopsGrid" class="loops-grid"></div>' +
       '<div class="loops-stack"><button class="loops-btn ghost" id="loopsResetBtn">Reset progress</button></div>' +
@@ -471,7 +471,7 @@
     save.lives--;
     persist();
     var q = G.queue[G.qi];
-    var hintText = q.hint ? q.hint : ("Starts with \"" + (q.a || "").charAt(0).toUpperCase() + "\"");
+    var hintText = q.hint ? q.hint : ("Starts with "" + (q.a || "").charAt(0).toUpperCase() + """);
     var box = document.createElement("div");
     box.className = "loops-hint";
     box.textContent = "💡 " + hintText;

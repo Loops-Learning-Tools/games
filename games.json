@@ -44,6 +44,15 @@
       "loopCount": 10,
       "questionCount": 100,
       "publishedAt": "2026-07-14T18:10:46.440Z"
+    },
+    {
+      "slug": "cape-verde",
+      "name": "Cape Verde",
+      "category": "Language",
+      "emoji": "🌍",
+      "loopCount": 10,
+      "questionCount": 100,
+      "publishedAt": "2026-07-14T19:03:15.031Z"
     }
   ]
 }

@@ -70,7 +70,7 @@
     return a;
   }
   function normalise(s) {
-    return (s || "").toString().trim().toLowerCase().replace(/[^\w\sáéíóúüñàèìòùâêîôûäëïöüçãõ]/gi, "");
+    return (s || "").toString().trim().toLowerCase().replace(/[^wsáéíóúüñàèìòùâêîôûäëïöüçãõ]/gi, "");
   }
   function fmtTime(sec) { return sec ? sec.toFixed(1) + "s" : "—"; }
   function questionKey(q) { return normalise(q.q) + "|" + normalise(q.a); }

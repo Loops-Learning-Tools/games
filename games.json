@@ -8,6 +8,15 @@
       "loopCount": 3,
       "questionCount": 25,
       "publishedAt": "2026-07-13T21:24:36.600Z"
+    },
+    {
+      "slug": "synge-street-cbs",
+      "name": "Synge Street CBS",
+      "category": "Language",
+      "emoji": "🌍",
+      "loopCount": 10,
+      "questionCount": 100,
+      "publishedAt": "2026-07-14T13:00:44.894Z"
     }
   ]
 }

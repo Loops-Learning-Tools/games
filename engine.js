@@ -70,7 +70,7 @@
     return a;
   }
   function normalise(s) {
-    return (s || "").toString().trim().toLowerCase().replace(/[^wsáéíóúüñàèìòùâêîôûäëïöüçãõ]/gi, "");
+    return (s || "").toString().trim().toLowerCase().replace(/[^\w\sáéíóúüñàèìòùâêîôûäëïöüçãõ]/gi, "");
   }
   function fmtTime(sec) { return sec ? sec.toFixed(1) + "s" : "—"; }
   function questionKey(q) { return normalise(q.q) + "|" + normalise(q.a); }
@@ -197,9 +197,9 @@
     var root = el("loopsApp");
     root.innerHTML =
       '<div class="loops-header">' +
-      '<img class="loops-logo-mark" src="' + (GAME.logoPath || "../Loops_triskel_mark.png") + '" alt="Loops" onerror="this.style.display='none'">' +
+      '<img class="loops-logo-mark" src="' + (GAME.logoPath || "../Loops_triskel_mark.png") + '" alt="Loops" onerror="this.style.display=\'none\'">' +
       '<div style="font-size:2rem;">' + (GAME.emoji || "🎮") + '</div>' +
-      "<h1>" + GAME.name + "</h1><div class="sub">Loops Learning Tools · Dublin</div></div>" +
+      "<h1>" + GAME.name + "</h1><div class=\"sub\">Loops Learning Tools · Dublin</div></div>" +
       '<div id="loopsHome" class="loops-screen active">' +
       '<div id="loopsGrid" class="loops-grid"></div>' +
       '<div class="loops-stack"><button class="loops-btn ghost" id="loopsResetBtn">Reset progress</button></div>' +
@@ -245,7 +245,7 @@
       wsTile.className = "loops-tile weak";
       wsTile.innerHTML =
         '<div class="loops-tile-top"><span>🎯</span><span>Weak Spots</span><span class="loops-badge">' + ws.length + '</span></div>' +
-        '<div class="loops-tile-meta">You're closer than you think — ' + MASTERY_TARGET + ' correct and any question is yours for good.</div>' +
+        '<div class="loops-tile-meta">You\'re closer than you think — ' + MASTERY_TARGET + ' correct and any question is yours for good.</div>' +
         '<div class="loops-tile-meta">Tap to level up →</div>';
       wsTile.addEventListener("click", function () { openReview(ws, "Weak Spots"); });
       grid.appendChild(wsTile);
@@ -471,7 +471,7 @@
     save.lives--;
     persist();
     var q = G.queue[G.qi];
-    var hintText = q.hint ? q.hint : ("Starts with "" + (q.a || "").charAt(0).toUpperCase() + """);
+    var hintText = q.hint ? q.hint : ("Starts with \"" + (q.a || "").charAt(0).toUpperCase() + "\"");
     var box = document.createElement("div");
     box.className = "loops-hint";
     box.textContent = "💡 " + hintText;
@@ -540,12 +540,26 @@
   // ── INIT ──
   window.LoopsEngine = {
     init: function (gameData) {
-      GAME = gameData;
-      loadSave();
-      buildQuestionIndex();
-      injectStyles();
-      buildSkeleton();
-      renderHome();
+      try {
+        GAME = gameData;
+        if (!GAME || !GAME.loops || !GAME.loops.length) throw new Error("This game has no playable content.");
+        loadSave();
+        buildQuestionIndex();
+        injectStyles();
+        buildSkeleton();
+        renderHome();
+      } catch (err) {
+        var root = document.getElementById("loopsApp");
+        if (root) {
+          root.innerHTML =
+            '<div style="max-width:420px;margin:40px auto;text-align:center;font-family:system-ui,sans-serif;padding:24px;">' +
+            '<div style="font-size:2rem;margin-bottom:10px;">⚠️</div>' +
+            '<div style="font-weight:800;font-size:1.1rem;margin-bottom:8px;">This game hit a snag loading</div>' +
+            '<div style="opacity:.7;font-size:.9rem;">Try refreshing the page. If it keeps happening, this game may need to be republished.</div>' +
+            "</div>";
+        }
+        if (window.console) console.error("LoopsEngine failed to init:", err);
+      }
     }
   };
 })();

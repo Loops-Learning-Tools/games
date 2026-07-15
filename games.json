@@ -53,6 +53,17 @@
       "loopCount": 10,
       "questionCount": 100,
       "publishedAt": "2026-07-14T19:03:15.031Z"
+    },
+    {
+      "slug": "tibetan-terriers",
+      "name": "Tibetan Terriers",
+      "category": "Misc",
+      "emoji": "✨",
+      "loopCount": 5,
+      "questionCount": 50,
+      "publishedAt": "2026-07-15T13:38:04.684Z",
+      "createdBy": "c_mrm4fa9a_vjaqxmob",
+      "author": "SMQ"
     }
   ]
 }

@@ -86,6 +86,17 @@
       "publishedAt": "2026-07-15T18:36:26.414Z",
       "createdBy": "c_mrm4v9td_v8t7p0sh",
       "author": "SMQ"
+    },
+    {
+      "slug": "basic-english",
+      "name": "Basic English",
+      "category": "Language",
+      "emoji": "🌍",
+      "loopCount": 5,
+      "questionCount": 50,
+      "publishedAt": "2026-07-15T22:19:18.557Z",
+      "createdBy": "c_mrmn1tcl_u0hxk13v",
+      "author": "Rodge"
     }
   ]
 }

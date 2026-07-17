@@ -108,6 +108,17 @@
       "publishedAt": "2026-07-17T18:24:53.064Z",
       "createdBy": "c_mrm4v9td_v8t7p0sh",
       "author": "Erica B"
+    },
+    {
+      "slug": "daily-help-no-1",
+      "name": "Daily help no:1",
+      "category": "Misc",
+      "emoji": "✨",
+      "loopCount": 5,
+      "questionCount": 50,
+      "publishedAt": "2026-07-17T19:51:33.446Z",
+      "createdBy": "c_mrpcm9g3_owbqsods",
+      "author": "Thomas Bolger"
     }
   ]
 }

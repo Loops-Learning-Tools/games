@@ -152,6 +152,17 @@
       "publishedAt": "2026-07-22T09:44:08.807Z",
       "createdBy": "c_mrma1co7_n2qv1lsa",
       "author": "James"
+    },
+    {
+      "slug": "alicante",
+      "name": "Alicante",
+      "category": "Language",
+      "emoji": "🌍",
+      "loopCount": 5,
+      "questionCount": 48,
+      "publishedAt": "2026-07-22T10:03:45.117Z",
+      "createdBy": "c_mrvwwr4n_golt2bs0",
+      "author": "Marcos"
     }
   ]
 }

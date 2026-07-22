@@ -141,6 +141,17 @@
       "publishedAt": "2026-07-22T00:01:59.572Z",
       "createdBy": "c_mrm4v9td_v8t7p0sh",
       "author": "SMQ"
+    },
+    {
+      "slug": "ukrainian-vocab",
+      "name": "Ukrainian vocab",
+      "category": "Language",
+      "emoji": "🌍",
+      "loopCount": 5,
+      "questionCount": 50,
+      "publishedAt": "2026-07-22T09:44:08.807Z",
+      "createdBy": "c_mrma1co7_n2qv1lsa",
+      "author": "James"
     }
   ]
 }

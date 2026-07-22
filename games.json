@@ -163,6 +163,17 @@
       "publishedAt": "2026-07-22T10:03:45.117Z",
       "createdBy": "c_mrvwwr4n_golt2bs0",
       "author": "Marcos"
+    },
+    {
+      "slug": "country-in-english",
+      "name": "COUNTRY in English",
+      "category": "Language",
+      "emoji": "🌍",
+      "loopCount": 5,
+      "questionCount": 50,
+      "publishedAt": "2026-07-22T10:12:53.516Z",
+      "createdBy": "c_mrvxa1ne_sm2v94hb",
+      "author": "Paul"
     }
   ]
 }

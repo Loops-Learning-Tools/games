@@ -196,6 +196,17 @@
       "publishedAt": "2026-07-22T10:31:05.024Z",
       "createdBy": "c_mrma1co7_n2qv1lsa",
       "author": "James"
+    },
+    {
+      "slug": "world-history",
+      "name": "World History",
+      "category": "Language",
+      "emoji": "🌍",
+      "loopCount": 5,
+      "questionCount": 50,
+      "publishedAt": "2026-07-22T11:02:14.191Z",
+      "createdBy": "c_mrvywpmf_ocsm1d62",
+      "author": "Paul"
     }
   ]
 }
